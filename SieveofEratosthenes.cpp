@@ -12,6 +12,9 @@ int main()
     int n;
     cin>>n;
     std::vector<int> v(n);
+// 0 for non prime
+// 1 for prime
+// initially set all the value as 1 (prime) except 0 and 1
     for(int i = 0;i<n;i++)
     {
     	if(i==0||i==1)
