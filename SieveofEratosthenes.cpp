@@ -15,7 +15,7 @@ int main()
 // 0 for non prime
 // 1 for prime
 // initially set all the value as 1 (prime) except 0 and 1
-    for(int i = 0;i<n;i++)
+    for(int i = 0;i<=n;i++)
     {
     	if(i==0||i==1)
     	{
@@ -26,7 +26,7 @@ int main()
     		v[i]=1;
     	}
     }
-    for(int i = 2;i<n;i++)
+    for(int i = 2;i<=n;i++)
     {
     	if(v[i]==1)
     	{
@@ -36,7 +36,7 @@ int main()
     		}
     	}
     }
-	for(int i = 0;i<n;i++)
+	for(int i = 0;i<=n;i++)
 	{
 		if(v[i]==1)
 		{
