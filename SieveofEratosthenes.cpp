@@ -1,22 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void sieve(int r, int l)
-{
-    int arr1[l];
-    for(int i = 0;i<=l;i++)
-    {
-        if(i==0||i==1)
-        {
-            arr1[i]= 0;
-        }
-        else
-        {
-            arr1[i] = 1;
-        }
-    }
+//int prime[100001];
 
-    for(int i = 2;i*i<=l;i++)
+bool sieve(int l)
+{
+    
+    vector<int> arr1(l+1,1);
+    
+    for(int i = 2;i<=l;i++)
     {
         if(arr1[i]==1)
         {
@@ -27,7 +19,10 @@ void sieve(int r, int l)
         }
     }
 
-    for(int i = r;i<l;i++)
+    arr1[0] = 0;
+    arr1[1] = 0;
+
+    for(int i= 0;i<=l;i++)
     {
         if(arr1[i]==1)
         {
@@ -44,7 +39,7 @@ int main()
 
     int r,l;
     cin>>r>>l;
-    sieve(r,l);
+    sieve(l);
     return 0;
 
 }
